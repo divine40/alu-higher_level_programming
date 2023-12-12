@@ -1,27 +1,15 @@
 #!/usr/bin/python3
-"""_summary_
-This module returns an integer: the addition of a and b
-"""
+add_integer = __import__('0-add_integer').add_integer
 
-
-def add_integer(a, b=98):
-    """_summary_
-
-    Args:
-        a (_type_): _description_
-        b (int, optional): _description_. Defaults to 98.
-
-    Raises:
-        TypeError: __if a is neither an int or float object__
-        TypeError: __if b is neither an int or float object__
-
-    Returns:
-        _type_: __The addition of a and b__
-    """
-
-    if not (isinstance(a, int)) and not (isinstance(a, float)):
-        raise TypeError("a must be an integer")
-    if not (isinstance(b, int)) and not (isinstance(b, float)):
-        raise TypeError("b must be an integer")
-
-    return int(a) + int(b)
+print(add_integer(1, 2))
+print(add_integer(100, -2))
+print(add_integer(2))
+print(add_integer(100.3, -2))
+try:
+    print(add_integer(4, "School"))
+except Exception as e:
+    print(e)
+try:
+    print(add_integer(None))
+except Exception as e:
+    print(e)
