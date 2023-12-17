@@ -12,4 +12,4 @@ if __name__ == '__main__':
         """Used context manager to automatically close the cursor object"""
         cur.execute('SELECT * FROM states ORDER BY states.id;')
         [print(row) for row in cur.fetchall() if row[1][0] == "N"]
-    con.close(u)
+    con.close()
